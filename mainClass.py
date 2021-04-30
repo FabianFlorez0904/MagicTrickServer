@@ -21,13 +21,15 @@ os.system("cls")
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Bind the socket to the port
-server_address = ('localhost', 5000)
+server_address = (socket.gethostbyname(socket.gethostname()), 5000)
 print('starting up on {} port {}'.format(*server_address))
 sock.bind(server_address)
 
 numeromagicoBin = ""
 
 while True:
+    print('El servidor esta conectado a\n',
+    socket.gethostbyname(socket.gethostname()))
     print('\nwaiting to receive message')
     data, address = sock.recvfrom(4096)
 
