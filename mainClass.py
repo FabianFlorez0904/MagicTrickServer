@@ -2,8 +2,7 @@
 #   Server
 #
 
-import socket
-import sys
+import socket,sys,os
 
 def binario_a_decimal(numeromagicoBin):
     numero_binario = invertirCadena(numeromagicoBin)
@@ -16,6 +15,8 @@ def invertirCadena(cadena):
     cadenaInvertida = cadena[::-1]
     return cadenaInvertida
 
+
+os.system("cls")
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
